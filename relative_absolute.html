@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对位置与绝对位置</title>
+<style>
+    .relative{
+        float: left;
+    }
+    .relative1{
+        background-color: aquamarine;
+        width: 100px;
+        height: 60px;
+        position: relative;
+        float: left;
+
+    }
+    .relative2{
+        background-color: aqua;
+        width: 100px;
+        height: 60px;
+        position: relative;
+        float: left;
+    }
+    .relative3{
+        background-color: aliceblue;
+        width: 100px;
+        height: 60px;
+        position: relative;
+        top: 0px;
+        float: left;
+
+    }
+    .absolute{
+        position: absolute;
+    }
+    .absolute1
+    {
+        background-color: aliceblue;
+        position: absolute;
+        display: block;
+        width: 100px;
+        height: 60px;
+
+    }
+    .absolute2
+    {
+        background-color: aqua;
+        position: absolute;
+        display: block;
+        width: 100px;
+        height: 60px;
+        left: 100px;
+    }
+    .absolute3
+    {
+        background-color: aquamarine;
+        position: absolute;
+        display: block;
+        width: 100px;
+        height: 60px;
+        left: 200px;
+    }
+
+</style>
+</head>
+<body>
+CSS的相对定位和绝对定位
+<br>
+元素的position属性的值默认为static 就是没有定位
+<br>
+这个时候你给这个元素设置的left,right,bottom,top这些偏移属性都是没有效果
+<br>
+例如 ：
+<br>
+.xk
+<br>
+{<br>
+left: 100px;
+<br>
+}
+<br>
+这一个定位是不起作用的
+<br>
+还有z-index属性在这时也不会生效。
+<br>
+<hr>
+<div>
+    <p>
+        相对定位与绝对定位的区别<br>
+        1、relative：相对于原来位置移动，元素设置此属性之后仍然处在文档流中，不影响其他元素的布局<br>
+        2、absolute:元素会脱离文档流，如果设置偏移量，会影响其他元素的位置定位<br>
+        https://www.runoob.com/w3cnote/css-position-static-relative-absolute-fixed.html<br>
+    </p>
+</div>
+<hr>
+相对定位
+在相对定位下div是默认垂直分布的，
+水平分布的话设置一下float为left
+<p>我们把下面图片设置为相对定位</p>
+<hr>
+<div>
+    <img src="相对定位与绝对定位/1-1.png" height="140" width="308"/>
+</div>
+<div class="relative">
+    <div class="relative1">111</div>
+    <div class="relative2">222</div>
+    <div class="relative3">333</div>
+</div>
+<div style="clear: both"></div>
+<div>记得清除一下浮动，不然下一个div会受到影响</div>
+
+<div>
+    <p>更改111的top</p>
+    <img src="相对定位与绝对定位/2-1.png" height="147" width="323"/>
+    <p>111相对原来带位置相应的移动</p>
+    <img src="相对定位与绝对定位/2-2.png" height="106" width="434"/>
+</div>
+<hr>
+
+<div class="absolute">
+    <p></p>
+    <img src="相对定位与绝对定位/3-1.png" height="554" width="496"/>
+    <div class="absolute1">444</div>
+    <div class="absolute2">555</div>
+    <div class="absolute3">666</div>
+
+</div>
+<div style="clear: both"></div>
+</body>
+</html>
