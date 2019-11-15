@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排序</title>
+
+</head>
+<body>
+<p>冒泡排序、选择排序.....</p>
+<p>https://www.cnblogs.com/moodlxs/p/10418767.html</p>
+
+
+冒泡排序数组(2,3,4,1,6,9,7)
+选择排序数组(8,2,5,7,9,6,1)
+<script>
+    var arr = new Array(2,3,4,1,6,9,7);
+    var arra =new Array(8,2,5,7,9,6,1)
+    function sort(a) {
+        for (var j = 0; j < a.length - 1; j++) {
+            for (var i = 0; i < a.length - 1; i++) {
+                if (a[i] > a[i + 1]) {
+                    // change
+                    temp = a[i + 1];
+                    a[i + 1] = a[i];
+                    a[i] = temp;
+                }
+            }
+        }
+
+    }
+sort(arr)
+console.log(arr)
+    function sort_1(a) {
+        for (var j = 0; j <a.length- 1;j++) {
+            for (var i = j; i < a.length- 1; i++) {
+                if (a[j] > a[i + 1]) {
+                    // change
+                    temp = a[j];
+                    a[j] = a[i + 1];
+                    a[i + 1] = temp;
+                }
+            }
+        }
+
+    }
+    sort_1(arra)
+    console.log(arra)
+</script>
+</body>
+</html>
